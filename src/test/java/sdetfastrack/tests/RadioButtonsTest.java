@@ -11,7 +11,7 @@ import static org.testng.AssertJUnit.assertFalse;
 import static org.testng.AssertJUnit.assertTrue;
 
 public class RadioButtonsTest {
-    RadioButtonPage radioButtonPage=new RadioButtonPage();
+    RadioButtonPage radioButtonPage = new RadioButtonPage();
 
     @Test
     public void testRadioButtons(){
@@ -23,13 +23,14 @@ public class RadioButtonsTest {
         assertTrue("Blue button was selected",radioButtonPage.blueRadioButton.isSelected());
         //3. Confirm radio button #Red is NOT enabled by default
         assertTrue("Red button was not selected",!radioButtonPage.redRadioButton.isSelected());
-        assertFalse("Red button was not selected",radioButtonPage.redRadioButton.isSelected());
+        assertFalse("Red button was selected",radioButtonPage.redRadioButton.isSelected());
         //4. Click radio button #Red to select it.
         radioButtonPage.redRadioButton.click();
         //5. Verify “Radio button 'Red' is selected.
         assertTrue("Red button was selected",radioButtonPage.redRadioButton.isSelected());
         //6. Verify “Radio button 'Blue' is NOT selected.
         assertFalse("Blue button was  selected",radioButtonPage.blueRadioButton.isSelected());
+
         //7. Select each sport verify each is selected.
         List<String> sports= Arrays.asList("basketball","football","hockey","water_polo");
 

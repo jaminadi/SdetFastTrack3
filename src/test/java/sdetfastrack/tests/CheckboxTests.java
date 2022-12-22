@@ -8,7 +8,6 @@ import static org.testng.AssertJUnit.assertFalse;
 import static org.testng.AssertJUnit.assertTrue;
 
 public class CheckboxTests {
-
     CheckBoxPage checkBoxPage =new CheckBoxPage();
 
     @Test
@@ -18,6 +17,7 @@ public class CheckboxTests {
         Driver.getDriver().get("http://practice.cybertekschool.com/checkboxes");
         //2. Confirm checkbox #1 is NOT selected by default
         assertTrue("Checkbox one was selected",!checkBoxPage.checkBoxOne.isSelected());
+        //you can also use assertFalse but without ! ...the same assertion
         assertFalse("Checkbox one was selected",checkBoxPage.checkBoxOne.isSelected());
         //3. Confirm checkbox #2 is SELECTED by default.
         assertTrue("Checkbox 2 was not selected",checkBoxPage.checkBoxTwo.isSelected());
