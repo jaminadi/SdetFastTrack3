@@ -7,6 +7,7 @@ import sdetfastrack.utilities.Driver;
 import static org.testng.AssertJUnit.*;
 
 public class TitleVerificationTests {
+    //we need to create an object of a TitleVerification page class, so that we can access whatever it has
     TitleVerification titleVerification = new TitleVerification();
 
     @Test
@@ -15,7 +16,7 @@ public class TitleVerificationTests {
         //1. Open Chrome browser
         //2. Go to https://www.facebook.com
         Driver.getDriver().get("https://www.facebook.com");
-        //Expected: Facebook - Log In or Sign Up
+        //Expected: Facebook - log in of sign up
         String expectedTitle = "Facebook - log in or sign up";
         //Actual: we need to get from browser using selenium
         String actualTitle = Driver.getDriver().getTitle();
@@ -26,11 +27,11 @@ public class TitleVerificationTests {
     @Test
     public void testGoogle() {
         //TC #2: Back and forth navigation
-        //1- Open a chrome browser
+        //1- Open chrome browser
         //2- Go to: https://google.com
 
         Driver.getDriver().get("https://google.com");
-        //3- Click to Gmail from top right.
+        //3- Click on Gmail button from top right.
         titleVerification.gmailButton.click();
         //4- Verify title contains:
         //Expected: Gmail
