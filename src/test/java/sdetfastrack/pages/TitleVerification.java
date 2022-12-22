@@ -10,10 +10,10 @@ import sdetfastrack.utilities.Driver;
 public class TitleVerification {
 //C:\Users\erjon\Desktop"C:\Users\erjon\Desktop\download.jfif"
     public TitleVerification() {
-        PageFactory.initElements(Driver.getDriver(), this);
+        PageFactory.initElements(Driver.getDriver(), this); //this means TitleVerification(){}
     }
 
-    @FindBy(xpath = "//a[text()='Gmail']")
+    @FindBy(xpath = "//a[text()='Gmail']") //xpath for Google test (Gmail button on top)
     public WebElement gmailButton;
 
     @FindBy(name = "q")
