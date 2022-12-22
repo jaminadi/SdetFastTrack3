@@ -8,6 +8,9 @@ import sdetfastrack.utilities.Driver;
 public class CheckBoxPage {
 
     public CheckBoxPage(){
+        //we need to create a constructor here
+        //we are using PageFactory.initElements here to instantiate whatever methods and webelements we have
+        //constructor must have the same name as class
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
