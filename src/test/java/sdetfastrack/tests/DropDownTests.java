@@ -76,7 +76,8 @@ public class DropDownTests {
         Select selectLanguages=new Select(dropDownPage.languageDropdown);
         //2. Select all the options from multiple select dropdown.
         List<WebElement>allOptions= selectLanguages.getOptions();
-        List<String>text=allOptions.stream().map(WebElement::getText).collect(Collectors.toList());
+        //this gets text from all webelements and converts them into String
+        List<String>text=allOptions.stream().map(WebElement::getText).collect(Collectors.toList());//returns text = [Java, JavaScript, C#, Python, Ruby, C]
         System.out.println("text = " + text);
         //3. Print out all selected values and verify each is selected.
         for (WebElement eachWebelement : allOptions) {
