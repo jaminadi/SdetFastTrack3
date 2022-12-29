@@ -14,7 +14,7 @@ public class IframePage {
     @FindBy(xpath = "//iframe[@id='mce_0_ifr']")
     public WebElement iframe;
 
-    public String iframeAsString="mce_0_ifr";
+    public String iframeAsString="mce_0_ifr";//this will only work if it's id or name
     //mce_0_ifr
 
     public int iframeIndex=0;
