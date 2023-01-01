@@ -41,6 +41,7 @@ public class SynchronizationTests {
         wait.until(ExpectedConditions.visibilityOf(synchronizationPage.errorMessage));
         //8. Assert “Your password is invalid!” text is displayed.
 
+        //assertTrue("Message was not displayed", synchronizationPage.errorMessage.isDisplayed());
         assertTrue("Message was not displayed",synchronizationPage.errorMessage.getText().contains("Your password is invalid!"));
     }
 

@@ -17,7 +17,7 @@ WindowHandlePage windowHandlePage=new WindowHandlePage();
         //1. Go to website: http://practice.cybertekschool.com/windows
         Driver.getDriver().get("http://practice.cybertekschool.com/windows");
 
-        //2. Assert: Title is “Practice”
+        //2. Assert: Title is “Windows”
 
         String expectedTitle="Windows";
         String actualTitle=Driver.getDriver().getTitle();
