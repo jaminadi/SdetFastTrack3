@@ -13,7 +13,7 @@ public class TestPdfClass {
 
         String url="https://www.orimi.com/pdf-test.pdf";
 
-        Driver.getDriver().get("file:///C:/Users/erjon/Desktop/pdf-test.pdf");
+        Driver.getDriver().get("file:///C:/Users/erjon/Desktop/pdf-test.pdf"); //or (url)
 
         String tex=  PdfReader.readPdfContent(Driver.getDriver().getCurrentUrl());
         assertTrue(tex.contains("Y1A 2C6 "));
